@@ -1,0 +1,8 @@
+# Redocly lint configuration for the Shelfwise API spec.
+extends:
+  - recommended
+
+rules:
+  # The spec uses example.com on purpose: it is a reserved documentation
+  # domain, so the sample API can never point at a real server.
+  no-server-example.com: off

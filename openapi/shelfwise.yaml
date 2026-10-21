@@ -1,0 +1,41 @@
+openapi: 3.0.3
+
+info:
+  title: Shelfwise Library API
+  version: 1.0.0
+  description: |
+    The Shelfwise Library API lets you search a library catalogue and
+    manage book reservations for library members.
+
+    This is a fictional API, created as a documentation portfolio sample.
+  contact:
+    name: Rahul Shukla
+    url: https://github.com/rahulshuklagit/api-docs-portfolio
+  
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+
+servers:
+  - url: https://api.shelfwise.example.com/v1
+    description: Production
+
+security:
+  - ApiKeyAuth: []
+
+tags:
+  - name: Books
+    description: Search and view books in the catalogue.
+  - name: Reservations
+    description: Reserve books and manage existing reservations.
+
+paths: {}
+
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+      description: >
+        Your API key. Send it in the `X-API-Key` header with every request.
